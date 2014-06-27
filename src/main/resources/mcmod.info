@@ -1,0 +1,21 @@
+[
+{
+  "modid": "LetsModReboot",
+  "name": "Lets Mod Reboot",
+  "description": "A follow along of Pahimar's Lets Mod Series.",
+  "version": "1.0",
+  "mcversion": "1.7.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Gwanunig"
+  ],
+  "credits": "To Pahimar for the YT tutorials.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
