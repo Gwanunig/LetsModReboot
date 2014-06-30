@@ -1,5 +1,6 @@
 package com.gwanunig.letsmodreboot;
 
+import com.gwanunig.letsmodreboot.Configuration.ConfigurationHandler;
 import com.gwanunig.letsmodreboot.proxy.IProxy;
 import com.gwanunig.letsmodreboot.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -16,13 +17,13 @@ public class LetsModReboot
     @Mod.Instance(Reference.MOD_ID)
     public static LetsModReboot instance;
 
-    @SidedProxy (clientSide = "com.gwanunig.letsmodreboot.proxy.ClientProxy", serverSide = "com.gwanunig.letsmodreboot.proxy.ServerProxy")
+    @SidedProxy (clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
